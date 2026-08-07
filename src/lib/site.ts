@@ -3,7 +3,7 @@ export const site = {
   legalName: "TechRoleBridge LLC",
   domain: "techrolebridge.com",
   tagline: "Hire engineering talent without the search.",
-  email: "hello@techrolebridge.com",
+  email: "dealton.robinson@techrolebridge.com",
   description:
     "TechRoleBridge LLC helps developers discover opportunities and helps companies hire across US and LATAM markets.",
 } as const;
