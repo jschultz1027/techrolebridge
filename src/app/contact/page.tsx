@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { ContactForm } from "@/components/ContactForm";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Contact ${site.legalName}. Reach us about open roles, talent discovery, or hiring support.`,
+  description: `Contact ${site.legalName}. Send your resume or interviewer video to join our network.`,
 };
 
 export default function ContactPage() {
@@ -14,11 +13,11 @@ export default function ContactPage() {
         <div className="max-w-lg">
           <p className="text-sm font-medium text-ink-soft">Contact</p>
           <h1 className="display mt-3 text-4xl font-bold text-ink sm:text-5xl">
-            Let’s start the conversation.
+            How to reach us.
           </h1>
           <p className="mt-5 text-base leading-relaxed text-ink-soft">
-            Candidates, hiring teams, and partners are welcome. Send a short
-            note and we’ll respond from our company inbox.
+            Email us directly based on the role you’re pursuing. We’ll review
+            what you send and follow up from our company inbox.
           </p>
 
           <div className="mt-10 space-y-6 border-t border-line pt-8">
@@ -43,16 +42,52 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-line bg-white p-6 shadow-[var(--shadow)] sm:p-8">
-          <h2 className="display text-2xl font-semibold text-ink">
-            Send a message
-          </h2>
-          <p className="mt-2 text-sm text-ink-soft">
-            We typically reply within one to two business days.
-          </p>
-          <div className="mt-8">
-            <ContactForm />
+        <div className="space-y-10 border-t border-line pt-8 lg:border-t-0 lg:border-l lg:pl-16 lg:pt-0">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">
+              Developers
+            </p>
+            <h2 className="display mt-3 text-2xl font-semibold text-ink">
+              Send your resume
+            </h2>
+            <p className="mt-3 text-base leading-relaxed text-ink-soft">
+              If you are a developer, email your resume to{" "}
+              <a
+                href={`mailto:${site.email}?subject=${encodeURIComponent("Developer resume")}`}
+                className="font-medium text-ink underline-offset-4 hover:underline"
+              >
+                {site.email}
+              </a>
+              .
+            </p>
           </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">
+              Interviewers
+            </p>
+            <h2 className="display mt-3 text-2xl font-semibold text-ink">
+              Send a short recorded video
+            </h2>
+            <p className="mt-3 text-base leading-relaxed text-ink-soft">
+              If you want to work as an interviewer, send a short recorded video
+              to{" "}
+              <a
+                href={`mailto:${site.email}?subject=${encodeURIComponent("Interviewer video introduction")}`}
+                className="font-medium text-ink underline-offset-4 hover:underline"
+              >
+                {site.email}
+              </a>
+              .
+            </p>
+          </div>
+
+          <a
+            href={`mailto:${site.email}`}
+            className="btn-primary inline-flex px-5 py-3 text-sm"
+          >
+            Email {site.email}
+          </a>
         </div>
       </div>
     </section>
