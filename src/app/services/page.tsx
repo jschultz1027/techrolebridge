@@ -137,6 +137,64 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <section className="border-b border-line bg-white py-16 md:py-20">
+        <div className="container-page grid items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-14">
+          <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-line">
+            <Image
+              src="/income-growth.jpg"
+              alt="Developers and interviewers growing their careers with TechRoleBridge"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div className="max-w-xl">
+            <p className="text-sm font-medium text-ink-soft">
+              For developers &amp; interviewers
+            </p>
+            <h2 className="display mt-3 text-3xl font-bold text-ink sm:text-4xl">
+              Grow your income by $3k+ in 2 months.
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-ink-soft">
+              Work with TechRoleBridge and put your skills to work—whether
+              you&apos;re matching into developer roles or joining as a technical
+              interviewer. Candidates who stay active with us often aim to
+              increase monthly income by $3,000+ within about two months through
+              consistent opportunities and paid interview work.
+            </p>
+            <ul className="mt-6 space-y-3 text-sm text-ink-soft sm:text-base">
+              <li className="flex gap-3">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+                <span>
+                  Developers: get matched to roles that can raise your earning
+                  potential faster.
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+                <span>
+                  Interviewers: earn through short, paid technical screening
+                  sessions on a dependable schedule.
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+                <span>
+                  Stay available, communicate clearly in English, and move with
+                  us toward stronger monthly income.
+                </span>
+              </li>
+            </ul>
+            <Link
+              href="/contact"
+              className="btn-primary mt-8 inline-flex px-5 py-3 text-sm"
+            >
+              Start with us
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-white py-16 md:py-20">
         <div className="container-page space-y-6">
           {services.map((service, index) => (
