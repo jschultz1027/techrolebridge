@@ -48,12 +48,6 @@ export function Header() {
               </Link>
             );
           })}
-          <Link href="/contact" className="btn-secondary px-4 py-2 text-sm">
-            Find roles
-          </Link>
-          <Link href="/contact" className="btn-primary px-4 py-2 text-sm">
-            Hire talent
-          </Link>
         </nav>
 
         <button
@@ -101,14 +95,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <div className="mt-2 grid gap-2">
-            <Link href="/contact" className="btn-secondary px-4 py-3 text-center text-sm">
-              Find roles
-            </Link>
-            <Link href="/contact" className="btn-primary px-4 py-3 text-center text-sm">
-              Hire talent
-            </Link>
-          </div>
         </nav>
       </div>
     </header>
