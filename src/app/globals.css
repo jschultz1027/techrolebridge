@@ -48,9 +48,44 @@ body {
   min-height: 100%;
 }
 
+/* High-contrast selection so text stays readable on light and dark sections */
 ::selection {
-  background: rgba(10, 10, 10, 0.12);
-  color: var(--ink);
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+/* Dark surfaces: invert selection so white/soft text stays visible */
+.bg-ink ::selection,
+.bg-ink::selection,
+footer ::selection,
+footer::selection {
+  background: #ffffff !important;
+  color: #0a0a0a !important;
+}
+
+.bg-ink ::-moz-selection,
+.bg-ink::-moz-selection,
+footer ::-moz-selection,
+footer::-moz-selection {
+  background: #ffffff !important;
+  color: #0a0a0a !important;
+}
+
+.btn-primary::selection,
+.btn-primary *::selection {
+  background: #ffffff !important;
+  color: #0a0a0a !important;
+}
+
+.btn-primary::-moz-selection,
+.btn-primary *::-moz-selection {
+  background: #ffffff !important;
+  color: #0a0a0a !important;
 }
 
 a {
