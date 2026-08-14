@@ -9,18 +9,19 @@ export const metadata: Metadata = {
 
 const positions = [
   {
-    title: "Java Developer",
+    title: "Senior Java Developer",
     type: "Full-time",
     summary:
-      "Join as a Java developer on a full-time engagement. Strong spoken English is required so you can collaborate clearly on calls and delivery.",
+      "Join as a senior Java developer on a full-time engagement. Strong spoken English is required so you can collaborate clearly on calls and delivery.",
     details: [
+      { label: "Level", value: "Senior" },
       { label: "Salary", value: "$1,500" },
       { label: "English", value: "B2+" },
       { label: "Schedule", value: "Full-time" },
       { label: "Period", value: "1 year+" },
     ],
-    applySubject: "Java Developer application",
-    applyHint: "Send your resume and a short note about your Java experience.",
+    applySubject: "Senior Java Developer application",
+    applyHint: "Send your resume and a short note about your senior-level Java experience.",
   },
   {
     title: "AI Engineer — Technical Interview Support",
