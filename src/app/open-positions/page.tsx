@@ -1,0 +1,127 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { site } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Open Positions",
+  description: `Current openings at ${site.legalName} for developers and technical interview support roles.`,
+};
+
+const positions = [
+  {
+    title: "Java Developer",
+    type: "Full-time",
+    summary:
+      "Join as a Java developer on a full-time engagement. Strong spoken English is required so you can collaborate clearly on calls and delivery.",
+    details: [
+      { label: "Salary", value: "$1,500" },
+      { label: "English", value: "B2+" },
+      { label: "Schedule", value: "Full-time" },
+      { label: "Period", value: "1 year+" },
+    ],
+    applySubject: "Java Developer application",
+    applyHint: "Send your resume and a short note about your Java experience.",
+  },
+  {
+    title: "AI Engineer — Technical Interview Support",
+    type: "Part-time",
+    summary:
+      "Support technical interview workflows as an AI engineer. Help with interview preparation structure, evaluation support, and screening conversations under your own professional identity.",
+    details: [
+      { label: "Rate", value: "$50 / hour" },
+      { label: "Schedule", value: "Part-time" },
+      { label: "Focus", value: "Technical interview support" },
+      { label: "Profile", value: "AI engineering background" },
+    ],
+    applySubject: "AI Engineer interview support application",
+    applyHint:
+      "Send a short recorded intro video and a brief summary of your AI / interview experience.",
+  },
+];
+
+export default function OpenPositionsPage() {
+  return (
+    <>
+      <section className="border-b border-line bg-white">
+        <div className="container-page max-w-3xl py-16 md:py-24">
+          <p className="text-sm font-medium text-ink-soft">Open Positions</p>
+          <h1 className="display mt-3 text-4xl font-bold text-ink sm:text-5xl md:text-6xl">
+            Roles open now.
+          </h1>
+          <p className="mt-5 text-base leading-relaxed text-ink-soft sm:text-lg">
+            Current opportunities for developers and engineers who want to grow
+            with {site.name}. Apply by email—we’ll follow up with next steps.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-white py-16 md:py-20">
+        <div className="container-page space-y-8">
+          {positions.map((role, index) => (
+            <article
+              key={role.title}
+              className="grid gap-8 border-t border-line pt-10 first:border-t-0 first:pt-0 md:grid-cols-[0.35fr_1fr] md:gap-12"
+            >
+              <div>
+                <p className="display text-5xl font-bold text-ink/15">
+                  0{index + 1}
+                </p>
+                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">
+                  {role.type}
+                </p>
+              </div>
+
+              <div className="max-w-2xl">
+                <h2 className="display text-2xl font-semibold text-ink sm:text-3xl">
+                  {role.title}
+                </h2>
+                <p className="mt-4 text-base leading-relaxed text-ink-soft">
+                  {role.summary}
+                </p>
+
+                <dl className="mt-8 grid gap-4 sm:grid-cols-2">
+                  {role.details.map((item) => (
+                    <div key={item.label}>
+                      <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">
+                        {item.label}
+                      </dt>
+                      <dd className="mt-1 text-base font-medium text-ink">
+                        {item.value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+
+                <p className="mt-6 text-sm text-ink-soft">{role.applyHint}</p>
+                <a
+                  href={`mailto:${site.email}?subject=${encodeURIComponent(role.applySubject)}`}
+                  className="btn-primary mt-5 inline-flex px-5 py-3 text-sm"
+                >
+                  Apply by email
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="container-page py-16 md:py-20">
+        <div className="rounded-3xl bg-ink px-8 py-12 text-white md:px-12">
+          <h2 className="display text-3xl font-bold sm:text-4xl">
+            Don’t see your fit?
+          </h2>
+          <p className="mt-4 max-w-xl text-white/70">
+            Tell us what you’re looking for—developer roles or interviewer
+            support—and we’ll keep you in mind for upcoming openings.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-flex items-center justify-center rounded-[0.6rem] bg-white px-6 py-3 text-sm font-semibold text-ink transition hover:bg-sand"
+          >
+            Contact us
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+}
