@@ -37,6 +37,7 @@ export const openPositions: OpenPosition[] = [
     details: [
       { label: "Focus", value: "SQL · SSRS · automation" },
       { label: "Salary", value: "$800" },
+      { label: "English", value: "B2+" },
       { label: "Payment", value: "Bi-weekly" },
       { label: "Schedule", value: "Part-time" },
       { label: "Location", value: "Remote" },
@@ -71,6 +72,7 @@ export const openPositions: OpenPosition[] = [
       "Support technical interview workflows as an AI engineer. Help with interview preparation structure, evaluation support, and screening conversations under your own professional identity.",
     details: [
       { label: "Rate", value: "$50 / hour" },
+      { label: "English", value: "B2+" },
       { label: "Schedule", value: "Part-time" },
       { label: "Focus", value: "Technical interview support" },
       { label: "Profile", value: "AI engineering background" },
