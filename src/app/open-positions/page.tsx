@@ -71,6 +71,38 @@ export default function OpenPositionsPage() {
                   ))}
                 </dl>
 
+                {role.responsibilities && role.responsibilities.length > 0 ? (
+                  <div className="mt-8">
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">
+                      Responsibilities
+                    </h3>
+                    <ul className="mt-3 space-y-2 text-sm text-ink-soft sm:text-base">
+                      {role.responsibilities.map((item) => (
+                        <li key={item} className="flex gap-3">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
+
+                {role.requiredSkills && role.requiredSkills.length > 0 ? (
+                  <div className="mt-8">
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">
+                      Required skills
+                    </h3>
+                    <ul className="mt-3 space-y-2 text-sm text-ink-soft sm:text-base">
+                      {role.requiredSkills.map((item) => (
+                        <li key={item} className="flex gap-3">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
+
                 <p className="mt-6 text-sm text-ink-soft">{role.applyHint}</p>
                 <a
                   href={`mailto:${site.email}?subject=${encodeURIComponent(role.applySubject)}`}
