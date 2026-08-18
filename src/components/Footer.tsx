@@ -23,8 +23,16 @@ export function Footer() {
           <ul className="space-y-3 text-sm text-white/75">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="transition hover:text-white">
+                <Link
+                  href={link.href}
+                  className="inline-flex items-center gap-2 transition hover:text-white"
+                >
                   {link.label}
+                  {"badge" in link ? (
+                    <span className="rounded-md bg-badge-active px-1.5 py-0.5 text-[0.65rem] font-semibold text-white">
+                      {link.badge}
+                    </span>
+                  ) : null}
                 </Link>
               </li>
             ))}

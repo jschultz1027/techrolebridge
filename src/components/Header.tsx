@@ -6,6 +6,14 @@ import { useEffect, useState } from "react";
 import { Logo } from "@/components/Logo";
 import { navLinks } from "@/lib/site";
 
+function NavBadge({ label }: { label: string }) {
+  return (
+    <span className="ml-2 rounded-md bg-badge-active px-1.5 py-0.5 text-[0.65rem] font-semibold text-white">
+      {label}
+    </span>
+  );
+}
+
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -36,15 +44,18 @@ export function Header() {
         <nav className="hidden items-center gap-7 md:flex" aria-label="Primary">
           {navLinks.map((link) => {
             const active = pathname === link.href;
+            const badge = "badge" in link ? link.badge : undefined;
+
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition ${
+                className={`inline-flex items-center text-sm font-medium transition ${
                   active ? "text-ink" : "text-ink-soft hover:text-ink"
                 }`}
               >
                 {link.label}
+                {badge ? <NavBadge label={badge} /> : null}
               </Link>
             );
           })}
@@ -86,15 +97,20 @@ export function Header() {
         }`}
       >
         <nav className="container-page flex flex-col gap-1 py-4" aria-label="Mobile">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="rounded-lg px-3 py-3 text-base font-medium text-ink hover:bg-teal-mist"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const badge = "badge" in link ? link.badge : undefined;
+
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="inline-flex items-center rounded-lg px-3 py-3 text-base font-medium text-ink hover:bg-teal-mist"
+              >
+                {link.label}
+                {badge ? <NavBadge label={badge} /> : null}
+              </Link>
+            );
+          })}
         </nav>
       </div>
     </header>

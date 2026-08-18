@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { openPositions } from "@/lib/positions";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -7,45 +8,17 @@ export const metadata: Metadata = {
   description: `Current openings at ${site.legalName} for developers and technical interview support roles.`,
 };
 
-const positions = [
-  {
-    title: "Senior Java Developer",
-    type: "Full-time",
-    summary:
-      "Join as a senior Java developer on a full-time engagement. Strong spoken English is required so you can collaborate clearly on calls and delivery.",
-    details: [
-      { label: "Level", value: "Senior" },
-      { label: "Salary", value: "$1,500" },
-      { label: "English", value: "B2+" },
-      { label: "Schedule", value: "Full-time" },
-      { label: "Period", value: "1 year+" },
-    ],
-    applySubject: "Senior Java Developer application",
-    applyHint: "Send your resume and a short note about your senior-level Java experience.",
-  },
-  {
-    title: "AI Engineer — Technical Interview Support",
-    type: "Part-time",
-    summary:
-      "Support technical interview workflows as an AI engineer. Help with interview preparation structure, evaluation support, and screening conversations under your own professional identity.",
-    details: [
-      { label: "Rate", value: "$50 / hour" },
-      { label: "Schedule", value: "Part-time" },
-      { label: "Focus", value: "Technical interview support" },
-      { label: "Profile", value: "AI engineering background" },
-    ],
-    applySubject: "AI Engineer interview support application",
-    applyHint:
-      "Send a short recorded intro video and a brief summary of your AI / interview experience.",
-  },
-];
-
 export default function OpenPositionsPage() {
   return (
     <>
       <section className="border-b border-line bg-white">
         <div className="container-page max-w-3xl py-16 md:py-24">
-          <p className="text-sm font-medium text-ink-soft">Open Positions</p>
+          <div className="inline-flex items-center gap-2">
+            <p className="text-sm font-medium text-ink-soft">Open Positions</p>
+            <span className="rounded-md bg-badge-active px-1.5 py-0.5 text-[0.65rem] font-semibold text-white">
+              Active
+            </span>
+          </div>
           <h1 className="display mt-3 text-4xl font-bold text-ink sm:text-5xl md:text-6xl">
             Roles open now.
           </h1>
@@ -58,7 +31,7 @@ export default function OpenPositionsPage() {
 
       <section className="bg-white py-16 md:py-20">
         <div className="container-page space-y-8">
-          {positions.map((role, index) => (
+          {openPositions.map((role, index) => (
             <article
               key={role.title}
               className="grid gap-8 border-t border-line pt-10 first:border-t-0 first:pt-0 md:grid-cols-[0.35fr_1fr] md:gap-12"
@@ -70,6 +43,11 @@ export default function OpenPositionsPage() {
                 <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">
                   {role.type}
                 </p>
+                {role.urgent ? (
+                  <span className="mt-3 inline-block rounded-md bg-badge-urgent px-1.5 py-0.5 text-[0.65rem] font-semibold text-white">
+                    Urgent
+                  </span>
+                ) : null}
               </div>
 
               <div className="max-w-2xl">

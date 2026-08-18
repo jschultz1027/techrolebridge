@@ -11,6 +11,10 @@ export const site = {
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/open-positions", label: "Open Positions" },
+  {
+    href: "/open-positions",
+    label: "Open Positions",
+    badge: "Active",
+  },
   { href: "/contact", label: "Contact" },
 ] as const;

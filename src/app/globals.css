@@ -12,6 +12,8 @@
   --paper-bright: #ffffff;
   --line: rgba(10, 10, 10, 0.1);
   --shadow: 0 18px 50px rgba(10, 10, 10, 0.08);
+  --badge-active: #1d6ef5;
+  --badge-urgent: #e85d04;
   --background: var(--paper);
   --foreground: var(--ink);
 }
@@ -29,6 +31,8 @@
   --color-paper: var(--paper);
   --color-paper-bright: var(--paper-bright);
   --color-line: var(--line);
+  --color-badge-active: var(--badge-active);
+  --color-badge-urgent: var(--badge-urgent);
   --font-display: var(--font-syne);
   --font-sans: var(--font-figtree);
 }
