@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Open Positions",
-  description: `Current openings at ${site.legalName} for developers and technical interview support roles.`,
+  description: `Current openings at ${site.legalName}. Developers who can work on a US timezone are welcome from any location.`,
 };
 
 export default function OpenPositionsPage() {
@@ -25,6 +25,10 @@ export default function OpenPositionsPage() {
           <p className="mt-5 text-base leading-relaxed text-ink-soft sm:text-lg">
             Current opportunities for developers and engineers who want to grow
             with {site.name}. Apply by email—we’ll follow up with next steps.
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-ink-soft sm:text-lg">
+            Developers who can work on a US timezone are welcome—from any
+            location, not only the US and LATAM.
           </p>
         </div>
       </section>
