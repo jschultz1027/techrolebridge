@@ -12,6 +12,33 @@ export type OpenPosition = {
 
 export const openPositions: OpenPosition[] = [
   {
+    title: "LATAM Job Link Collector",
+    type: "Part-time",
+    urgent: true,
+    summary:
+      "We are looking for LATAM-based job seekers to find and share active job links from Latin America. Your task is to collect only LATAM job links—clear, valid, and relevant openings.",
+    details: [
+      { label: "Focus", value: "LATAM job links only" },
+      { label: "Rate", value: "$0.10 / link" },
+      { label: "English", value: "B2+" },
+      { label: "Schedule", value: "Part-time" },
+      { label: "Location", value: "LATAM" },
+    ],
+    responsibilities: [
+      "Find and submit active job postings based in Latin America.",
+      "Share only LATAM job links—no roles outside the region.",
+      "Confirm each link is valid, current, and clearly related to an open position.",
+    ],
+    requiredSkills: [
+      "Familiarity with LATAM job boards and hiring channels.",
+      "Attention to detail when checking link quality and location.",
+      "Reliable communication and consistent submission of links.",
+    ],
+    applySubject: "LATAM Job Link Collector application",
+    applyHint:
+      "Email us a short intro and confirm you can source LATAM job links.",
+  },
+  {
     title: "Senior Java Developer",
     type: "Full-time",
     urgent: true,
@@ -44,33 +71,6 @@ export const openPositions: OpenPosition[] = [
     applySubject: "AI Engineer interview support application",
     applyHint:
       "Send a short recorded intro video and a brief summary of your AI / interview experience.",
-  },
-  {
-    title: "LATAM Job Link Collector",
-    type: "Part-time",
-    urgent: false,
-    summary:
-      "We are looking for LATAM-based job seekers to find and share active job links from Latin America. Your task is to collect only LATAM job links—clear, valid, and relevant openings.",
-    details: [
-      { label: "Focus", value: "LATAM job links only" },
-      { label: "Rate", value: "$0.10 / link" },
-      { label: "English", value: "B2+" },
-      { label: "Schedule", value: "Part-time" },
-      { label: "Location", value: "LATAM" },
-    ],
-    responsibilities: [
-      "Find and submit active job postings based in Latin America.",
-      "Share only LATAM job links—no roles outside the region.",
-      "Confirm each link is valid, current, and clearly related to an open position.",
-    ],
-    requiredSkills: [
-      "Familiarity with LATAM job boards and hiring channels.",
-      "Attention to detail when checking link quality and location.",
-      "Reliable communication and consistent submission of links.",
-    ],
-    applySubject: "LATAM Job Link Collector application",
-    applyHint:
-      "Email us a short intro and confirm you can source LATAM job links.",
   },
 ];
 
