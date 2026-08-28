@@ -27,6 +27,12 @@ const slides: Slide[] = [
     caption: "From junior to senior — talent across US & LATAM markets.",
   },
   {
+    type: "video",
+    src: "/carousel/intro.mp4",
+    alt: "TechRoleBridge introduction video",
+    caption: "Meet the bridge between talent and opportunity.",
+  },
+  {
     type: "image",
     src: "/carousel/team-3w2m.jpg",
     alt: "Three women and two men collaborating around laptops in a modern office",
