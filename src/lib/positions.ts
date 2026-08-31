@@ -39,6 +39,35 @@ export const openPositions: OpenPosition[] = [
       "Email us a short intro and confirm you can source LATAM job links.",
   },
   {
+    title: "US Talent Sourcer",
+    type: "Part-time",
+    urgent: false,
+    summary:
+      "Support TechRoleBridge from the United States by researching roles and sharing openings under your own professional LinkedIn profile. You must live in the US and work from your personal laptop.",
+    details: [
+      { label: "Location", value: "United States" },
+      { label: "Pay", value: "$200 / month" },
+      { label: "English", value: "B2+" },
+      { label: "Schedule", value: "Part-time" },
+      { label: "Equipment", value: "Personal laptop required" },
+    ],
+    responsibilities: [
+      "Research and share relevant US job openings with our team.",
+      "Use your own professional LinkedIn profile for networking and outreach.",
+      "Work remotely from your personal laptop with reliable internet.",
+      "Communicate clearly on progress and open roles during weekly check-ins.",
+    ],
+    requiredSkills: [
+      "Must live in the United States.",
+      "Active personal LinkedIn profile used professionally as yourself.",
+      "Personal laptop and stable internet connection.",
+      "Strong attention to detail and clear written English (B2+).",
+    ],
+    applySubject: "US Talent Sourcer application",
+    applyHint:
+      "Email a short intro, confirm you live in the US, and share your LinkedIn profile link.",
+  },
+  {
     title: "Senior Java Developer",
     type: "Full-time",
     urgent: true,
