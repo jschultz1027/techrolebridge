@@ -57,6 +57,33 @@ export const openPositions: OpenPosition[] = [
     applyHint:
       "Send a short recorded intro video and a brief summary of your AI / interview experience.",
   },
+  {
+    title: "LATAM Technical Interviewer",
+    type: "Part-time",
+    urgent: false,
+    summary:
+      "Join as a technical interviewer if you live in Brazil, Colombia, Argentina, or Mexico. Run screening conversations as yourself and help evaluate developer candidates.",
+    details: [
+      { label: "Location", value: "Brazil · Colombia · Argentina · Mexico" },
+      { label: "Rate", value: "$30 / hour" },
+      { label: "English", value: "B2+" },
+      { label: "Schedule", value: "Part-time" },
+      { label: "Focus", value: "Technical interviewing" },
+    ],
+    responsibilities: [
+      "Lead technical screening interviews under your own professional identity.",
+      "Assess candidates clearly in English and share structured feedback.",
+      "Join scheduled calls reliably on a US-friendly timezone when needed.",
+    ],
+    requiredSkills: [
+      "Must live in Brazil, Colombia, Argentina, or Mexico.",
+      "B2+ English for live interview conversations.",
+      "Comfort evaluating software engineering skills.",
+    ],
+    applySubject: "LATAM Technical Interviewer application",
+    applyHint:
+      "Send a short recorded intro video and confirm you live in Brazil, Colombia, Argentina, or Mexico.",
+  },
 ];
 
 export const activeOpenPositionsCount = openPositions.length;
