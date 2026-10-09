@@ -41,23 +41,6 @@ export const openPositions: OpenPosition[] = [
       "Email a short intro, confirm you live in the US, and share your LinkedIn profile link.",
   },
   {
-    title: "Senior Java Developer",
-    type: "Full-time",
-    urgent: true,
-    summary:
-      "Join as a senior Java developer on a full-time engagement. Strong spoken English is required so you can collaborate clearly on calls and delivery.",
-    details: [
-      { label: "Level", value: "Senior" },
-      { label: "Salary", value: "$1,500" },
-      { label: "English", value: "B2+" },
-      { label: "Schedule", value: "Full-time" },
-      { label: "Period", value: "1 year+" },
-    ],
-    applySubject: "Senior Java Developer application",
-    applyHint:
-      "Send your resume and a short note about your senior-level Java experience.",
-  },
-  {
     title: "AI Engineer — Technical Interview Support",
     type: "Part-time",
     urgent: false,
